@@ -1,0 +1,38 @@
+<h1 class="_Header">ABIRE</h1>
+
+<div class="_Container">
+  <div class="_RegisterBoxContainer">
+    <div id="iconContainer">
+      <%= image_tag("icon.png", class: "_icon", alt: "icon")%>
+    </div>
+    <% if params[:role] == "contractor"%>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "_RegisterForm"}) do |f| %>
+        <%= f.text_field :first_name, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials", placeholder: "First Name" %>
+        <%= f.text_field :last_name, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials", placeholder: "Last Name" %>
+        <%= f.email_field :email, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowTwo", placeholder: "E-Mail" %>
+        <%= f.phone_field :phone_number, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowTwo", placeholder: "Phone Number" %>
+        <%= f.text_field :category, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowThree", placeholder: "Category" %>
+        <%= f.text_field :work_description, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowThree", placeholder: "Work Description" %>
+        <%= f.text_field :zip_code, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowFour", placeholder: "Zip Code" %>
+        <%= f.password_field :password, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowFour", id: "_RegisterPassword", placeholder: "Password"%>
+        <%= f.submit "Register", class: "_RegisterInput ripple", id: "_RegisterSubmit" %>
+        <p id="_RegisterResponse"></p>
+        <p id="_Agreement">By clicking 'Register' you agree to our <a href="/legal/terms_and_conditions" class="agreement_link">Terms</a> and our <a href="/legal/cookies_policy" class="agreement_link"> Cookies Policy</a></p>
+      <% end %>
+    <%end%>
+
+    <% if params[:role] == "viewer" || params[:role] == "" || !params[:role]%>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "_RegisterForm"}) do |f| %>
+        <%= f.text_field :first_name, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials", placeholder: "First Name" %>
+        <%= f.text_field :last_name, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials", placeholder: "Last Name" %>
+        <%= f.email_field :email, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowTwo", placeholder: "E-Mail" %>
+        <%= f.phone_field :phone_number, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowTwo", placeholder: "Phone Number" %>
+        <%= f.text_field :zip_code, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowThree", placeholder: "Zip Code" %>
+        <%= f.password_field :password, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowThree", id: "_RegisterPassword", placeholder: "Password"%>
+        <%= f.submit "Register", class: "_RegisterInput ripple", id: "_RegisterSubmit" %>
+        <p id="_RegisterResponse"></p>
+        <p id="_Agreement">By clicking 'Register' you agree to our <a href="/legal/terms_and_conditions" class="agreement_link">Terms</a> and our <a href="/legal/cookies_policy" class="agreement_link"> Cookies Policy</a></p>
+      <% end %>
+    <%end%>
+  </div>
+</div>

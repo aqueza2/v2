@@ -1,0 +1,33 @@
+<!-- <%= video_tag(["downtown.mp4", "download.webm"], height: '120%', width: "100%", controls: true, autobuffer: true, autoplay: true, loop: true, playsinline: true, class: "videoBackground")%> -->
+
+<!-- <%= video_tag("https://www.youtube.com/embed/jRn-3OKGcY8", height: '120%', width: "100%", controls: true, autobuffer: true, autoplay: true, loop: true, playsinline: true, class: "videoBackground")%> -->
+<h1 class="_Header">ABIRE</h1>
+
+<div class="_Container">
+  <div class="_LoginBoxContainer">
+    <div id="iconContainer">
+      <%= image_tag("icon.png", class: "_icon", alt: "icon")%>
+    </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "_LoginForm"}) do |f| %>
+    <%= f.email_field :email, autofocus: true, required: "", autocomplete:"off", class: "_LoginInput _LoginCredentials", placeholder: "Username or E-Mail" %>
+    <%= f.password_field :password, required: "", autocomplete:"off", class: "_LoginInput _LoginCredentials", id: "_LoginPassword", placeholder: "Password"%>
+    <%= f.submit "Submit", class: "_LoginInput ripple", id: "_LoginSubmit" %>
+    <p id="_LoginResponse"></p>
+    <p id="_ForgotPassword"><a href="/forgot_password">Forgot Password?</a></p>
+    <% end %>
+  </div>
+</div>
+
+<button class="_RegisterButton" type="button" id="registerButton">Register</button>
+
+<div class="registerBack hidden" id="registerBack">
+  <div class="register">
+    <h1 class="im_a">I want to register as a...</h1>
+    <button class="registerButton" id="lR">
+      <%= link_to "Browser", new_user_registration_path(:role => "viewer"), class: "rLinks" %>
+    </button>
+    <button class="registerButton" id="rR">
+      <%= link_to "Pro", new_user_registration_path(:role => "contractor"), class: "rLinks" %>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+<%= @listing.title%>
+<%= @listing.description%>
+<%= @listing.church.city%>
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

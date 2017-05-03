@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+    <noscript>Please Enable JavaScript to Use This Webpage</noscript>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icon.png">
+    <title>App Name</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="template_author" content="Daniel Jimenez">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all">
+    <meta name="language" content="English">
+  </head>
+  <body>
+    <%= video_tag(["downtown.mp4", "download.webm"], height: '120%', width: "100%", controls: true, autobuffer: true, autoplay: true, loop: true, playsinline: true, class: "videoBackground")%>
+
+    <h1 class="_Header">App Name</h1>
+
+    <div class="_Container">
+      <div class="_RegisterBoxContainer">
+        <div id="iconContainer">
+          <%= image_tag("icon.png", class: "_icon", alt: "icon")%>
+        </div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "_RegisterForm"}) do |f| %>
+        <%= f.text_field :firstname, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials", placeholder: "First Name" %>
+        <%= f.text_field :lastname, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials", placeholder: "Last Name" %>
+        <%= f.email_field :email, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowTwo", placeholder: "E-Mail" %>
+        <%= f.phone_field :phone_number, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowTwo", placeholder: "Phone Number" %>
+        <%= f.text_field :category, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowThree", placeholder: "Category" %>
+        <%= f.text_field :work_description, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowThree", placeholder: "Work Description" %>
+        <%= f.text_field :zip_code, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowFour", placeholder: "Zip Code" %>
+        <%= f.text_field :access_code, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowFour", placeholder: "Access Code" %>
+        <%= f.password_field :password, required: "", autocomplete:"off", class: "_RegisterInput _RegisterCredentials RowFive", id: "_LoginPassword", placeholder: "Password"%>
+        <%= f.submit "Register", class: "_RegisterInput ripple", id: "_RegisterSubmit" %>
+        <p id="_RegisterResponse"></p>
+        <p id="_Agreement">By clicking 'Register' you agree to our <a href="/legal/terms_and_conditions" class="agreement_link">Terms</a> and our<a href="/legal/cookies_policy" class="agreement_link"> Coookies Policy</a></p>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+OLD Register
+
+<!-- <div class="form">
+  <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Sign Up</a></li>
+    <li class="tab"><a href="#login">Log In</a></li>
+  </ul>
+  <div class="tab-content fade">
+    <div id="signup">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="top-row">
+          <div class="field-wrap">
+            <%= f.label :first_name, class: "req" %>
+            <%= f.text_field :first_name, autofocus: true, required: "" %>
+          </div>
+
+          <div class="field-wrap">
+            <%= f.label :last_name, class: "req" %>
+            <%= f.text_field :last_name, required: "" %>
+          </div>
+        </div>
+
+        <div class="top-row">
+          <div class="field-wrap">
+            <%= f.label :email, class: "req" %>
+            <%= f.email_field :email, required: "" %>
+          </div>
+
+          <div class="field-wrap">
+            <%= f.label :phone_number, class: "req" %>
+            <%= f.text_field :phone_number, required: "" %>
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <%= f.label :password, class: "req" %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+          <%= f.password_field :password, required: "", autocomplete:"off" %>
+        </div>
+
+        <div class="field-wrap">
+          <%= f.label :password_confirmation, class: "req" %>
+          <%= f.text_field :password_confirmation, required: "", autocomplete:"off" %>
+        </div>
+      </div>
+      <button type="submit" class="button button-block"/>Sign Up!</button>
+      <% end %>
+      <p class="pull-center"><%= render "devise/shared/links" %></p>
+  </div>
+</div> -->

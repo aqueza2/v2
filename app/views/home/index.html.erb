@@ -1,0 +1,81 @@
+<div class="slideshow_container">
+  <%= image_tag("slideshow_image_one.png", class: "slideshow_image", id: "ss_one", alt: "slideshow")%>
+  <%= image_tag("slideshow_image_two.png", class: "slideshow_image hidden", id: "ss_two", alt: "slideshow")%>
+  <%= image_tag("slideshow_image_three.png", class: "slideshow_image hidden", id: "ss_three", alt: "slideshow")%>
+
+  <div class="icon_container">
+    <%= image_tag("icon.png", class: "icon", id: "icon", alt: "icon")%>
+  </div>
+
+  <div class="abire_container">
+    <h1 class="abire_text">ABIRE</h1>
+  </div>
+
+  <div class="current_slide_container">
+    <span class="slide_circle filled active" id="sc_one">
+    </span>
+
+    <span class="slide_circle no_border">
+    </span>
+
+    <span class="slide_circle active" id="sc_two">
+    </span>
+
+    <span class="slide_circle no_border">
+    </span>
+
+    <span class="slide_circle active"id="sc_three">
+    </span>
+  </div>
+  <div class="motto_container">
+    <h1 class="abire_motto">Connect with Nationwide Building Professionals</h1>
+  </div>
+</div>
+
+<div class="button_container">
+  <button class="routeBtn" id="login">
+   <%= link_to "Login", new_user_session_path %>
+  </button>
+  <button class="routeBtn ripple" id="register">
+    Register
+  </button>
+</div>
+
+<section class="about_us">
+  <section class="about_us_cards" id="card_one">
+    <%= image_tag("history.png", class: "card_image", alt: "history image")%>
+    <h1 class="card_header"><b>History</b></h1>
+    <p class="card_text">We started in Chicago as a young...</p>
+    <button class="read_more ripple" data-ripple-color="#4BA173">READ MORE</button>
+    <button class="read_less ripple hidden" data-ripple-color="#4BA173">READ LESS</button>
+  </section>
+
+  <section class="about_us_cards" id="card_two">
+    <%= image_tag("mission.png", class: "card_image", alt: "mission image")%>
+    <h1 class="card_header"><b>Our Mission</b></h1>
+    <p class="card_text">ABIRE is set out to revolutionize the way infrastructures are created through community support...</p>
+    <button class="read_more ripple" data-ripple-color="#4BA173">READ MORE</button>
+    <button class="read_less ripple hidden" data-ripple-color="#4BA173">READ LESS</button>
+  </section>
+
+  <section class="about_us_cards" id="card_three">
+    <%= image_tag("about_us.png", class: "card_image", alt: "about us image")%>
+    <h1 class="card_header"><b>About Us</b></h1>
+    <p class="card_text" id="a_before">Through an intensive and innovative work ethic, we compose ourselves of an elite and filtered team of...</p>
+    <p class="card_text hidden" id="a_after">Through an intensive and innovative work ethic, we compose ourselves of an elite and filtered team of students and professionals that deliver the best possible content. ABIRE Tech is a start up of internet service company technologies that complements the use of everyday people and skilled companies everywhere, as we set ourselves in a higher technological world we feel the need to leave a footprint with our names and everyone who have or will help us deliver this message all over the world.</p>
+    <button class="read_more ripple " data-ripple-color="#4BA173">READ MORE</button>
+    <button class="read_less ripple hidden" data-ripple-color="#4BA173">READ LESS</button>
+  </section>
+</section>
+
+<div class="registerBack hidden" id="registerBack">
+  <div class="register">
+    <h1 class="im_a">I want to register as a...</h1>
+    <button class="registerButton" id="lR">
+      <%= link_to "Browser", new_user_registration_path(:role => "viewer"), class: "rLinks" %>
+    </button>
+    <button class="registerButton" id="rR">
+      <%= link_to "Pro", new_user_registration_path(:role => "contractor"), class: "rLinks" %>
+    </button>
+  </div>
+</div>

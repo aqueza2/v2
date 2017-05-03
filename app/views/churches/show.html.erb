@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+ <%= @church.street_address%>
+ <%= @church.city%>
+ <%= @church.state%>
+ <%= @church.zip_code%>
+
+<%= link_to 'Edit', edit_church_path(@church) %> |
+<%= link_to 'Back', churches_path %>

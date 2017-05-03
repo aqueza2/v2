@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+    <noscript>Please Enable JavaScript to Use This Webpage</noscript>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/icon.png">
+    <title>App Name</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="template_author" content="Daniel Jimenez">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all">
+    <meta name="language" content="English">
+  </head>
+  <body>
+    <%= video_tag(["downtown.mp4", "download.webm"], height: '120%', width: "100%", controls: true, autobuffer: true, autoplay: true, loop: true, playsinline: true, class: "videoBackground")%>
+
+    <h1 class="_Header">App Name</h1>
+
+    <div class="_Container">
+      <div class="_RegisterBoxContainer">
+        <div id="iconContainer">
+          <%= image_tag("icon.png", class: "_icon", alt: "icon")%>
+        </div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "_RegisterForm"}) do |f| %>
+        <%= f.text_field :username, autofocus: true, required: "", autocomplete:"off", class: "_LoginInput _LoginCredentials", placeholder: "Username or E-Mail" %>
+        <%= f.password_field :password, required: "", autocomplete:"off", class: "_LoginInput _LoginCredentials", id: "_LoginPassword", placeholder: "Password"%>
+        <%= f.submit "Register", class: "_RegisterInput ripple", id: "_RegisterSubmit" %>
+        <p id="_RegisterResponse"></p>
+        <p id="_Agreement">By clicking 'Register' you agree to our <a href="/legal/terms_and_conditions" class="agreement_link">Terms</a> and our<a href="/legal/cookies_policy" class="agreement_link"> Coookies Policy</a></p>
+        <% end %>
+          <!-- <input name="user[firstname]" class="_RegisterInputL _RegisterCredentials" type="text" maxlength="25" placeholder="First Name" required/>
+          <input name="user[lastname]" class="_RegisterInputR _RegisterCredentials" type="text" maxlength="25" placeholder="Last Name" required/>
+          <input name="user[email]" class="_RegisterInputL _RegisterCredentials RowTwo" type="email" maxlength="40" placeholder="E-Mail" required/>
+          <input name="user[phone_number]" class="_RegisterInputR _RegisterCredentials RowTwo" type="tel" maxlength="40" placeholder="Phone Number" required/>
+          <input name="user[username]" class="_RegisterInputL _RegisterCredentials RowThree" type="text" maxlength="20" placeholder="Username" required/>
+          <input name="user[password]" class="_RegisterInputR _RegisterCredentials RowThree" id="_RegisterPassword" type="password" maxlength="22" placeholder="Password" required/>
+          <input name="user[dob]" class="_RegisterInputB _RegisterCredentials RowFour" id="dob" type="text" maxlength="10" placeholder="Date of Birth" required/> -->
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+.card-margin{
+  margin: 30px;
+  display: inline-block !important;
+}
+
+.page-content-view{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
