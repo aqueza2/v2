@@ -1,17 +1,6 @@
 class User::RegistrationsController < Devise::RegistrationsController
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-   def new
-     p "___________"
-     p params[:role]
-     p "__________**********************************_"
-     @role = params[:role]
-     params[:role] = "garden"
-     build_resource({})
-     yield resource if block_given?
-     respond_with resource
-   end
-
    protected
 
    def configure_permitted_parameters
