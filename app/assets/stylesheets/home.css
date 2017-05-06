@@ -44,8 +44,15 @@ a {
   display: block;
   height: 100%;
   width: 100%;
-  /*-webkit-filter: blur(2.5px);
-  filter: blur(2.5px);*/
+  /*-webkit-filter: blur(2.5px); */
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  height: 80%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
 }
 
 .app_icon {
@@ -86,17 +93,17 @@ a {
   color: white;
   margin: 0 auto;
   width: 100%;
-  bottom: 12%;
+  bottom: 0%;
   position: relative;
-  font-size: 40px;
-  font-weight: 300;
+  font-size: 48px;
   font-family: 'Raleway', sans-serif;
+  font-weight: 300;
 }
 
 .motto_container {
   position: absolute;
   left: 0;
-  top:0;
+  top: 2%;
   height: 80%;
   width: 100%;
   display: flex;
@@ -105,6 +112,7 @@ a {
   text-align: center;
   min-height: 300px;
   min-width: 300px;
+  text-shadow:1px 1px 2px #000;
 }
 
 .abire_motto {
@@ -113,8 +121,8 @@ a {
   width: 100%;
   top: 15%;
   position: relative;
-  font-weight: 300;
   font-family: 'Raleway', sans-serif;
+  font-weight: 300;
 }
 
 .icon {
@@ -175,8 +183,8 @@ a {
   height: 30px;
   display: block;
   position: relative;
-  top: 10%;
-  margin: 0 auto;;
+  top: 15px;
+  margin: 0 auto;
 }
 
 .card_header {
@@ -185,7 +193,7 @@ a {
   font-weight: 300;
   font-family: 'Raleway', sans-serif;
   color: #000;
-  top: 10%;
+  top: 10px;
 }
 
 .card_text {
@@ -297,26 +305,36 @@ a {
 
 .routeBtn {
   min-height: 30px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0;
   cursor: pointer;
   width: 45%;
   position: relative;
   right: 2%;
   height: 100%;
-  background-color: #4BA173;
+  background-color: transparent;
   color: white;
   outline: none;
   border: none;
   font-family: 'Raleway', sans-serif;
 }
 
+.routeBtn:hover {
+  box-shadow: 0px 0px 2px 0px rgba(255,255,255, 0.2);
+  background: rgba(255,255,255, 0.1);
+}
+
 .about_us {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
   top: 78%;
   width: 90%;
-  height: 25%;
   left: 5%;
+  max-height: auto;
   background-color: #fff;
   margin: 0 auto;
   box-shadow: 0px 0px 20px 0px;
@@ -333,13 +351,10 @@ a {
 }
 
 .expand {
-  -moz-transition: height 1s;
-   -ms-transition: height 1s;
-   -o-transition: height 1s;
-   -webkit-transition: height 1s;
-   transition: height 1s;
-   height: 45%;
-   overflow: hidden;
+  height: auto;
+  max-height: 400px;
+  transition: all 1s ease-in;
+  overflow: hidden;
 }
 
 @media (max-height: 700px) {
@@ -357,9 +372,18 @@ a {
     top: 40%;
     font-size: 26px;
   }
+
+  .abire_motto {
+    top: 30%;
+    font-size: 24px;
+  }
 }
 
 @media (max-height: 600px) {
+  .shadow {
+    height: 100%;
+  }
+
   .abire_text {
     color: white;
     margin: 0 auto;
@@ -369,26 +393,9 @@ a {
     font-size: 32px;
     font-family: 'Raleway', sans-serif;
   }
-}
 
-@media (max-height: 500px) {
   .about_us {
     display: none;
-  }
-
-  .abire_text {
-    color: white;
-    margin: 0 auto;
-    width: 100%;
-    bottom: 0%;
-    position: relative;
-    font-size: 30px;
-    font-family: 'Raleway', sans-serif;
-  }
-
-  .button_container {
-    top: 1%;
-    height: 8%;
   }
 
   .current_slide_container {
@@ -404,6 +411,28 @@ a {
     width: 100%;
     height: 100%;
     margin: 0;
+  }
+
+  .abire_motto {
+    top: 25%;
+    font-size: 24px;
+  }
+}
+
+@media (max-height: 500px) {
+  .abire_text {
+    color: white;
+    margin: 0 auto;
+    width: 100%;
+    bottom: 0%;
+    position: relative;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .button_container {
+    top: 1%;
+    height: 8%;
   }
 
   .icon {
@@ -427,7 +456,7 @@ a {
 
 @media (max-height: 400px) {
   .abire_motto {
-    top: 40%;
+    top: 20%;
     font-size: 20px;
   }
 
@@ -459,6 +488,10 @@ a {
 @media (max-width: 600px) {
   .slide_circle {
     left: 45%;
+  }
+
+  .routeBtn {
+    right: 15%;
   }
 }
 
@@ -578,16 +611,6 @@ a {
     margin: 0 auto;
     top: -10%;
   }
-
-  .expand {
-    -moz-transition: height 1s;
-     -ms-transition: height 1s;
-     -o-transition: height 1s;
-     -webkit-transition: height 1s;
-     transition: height 1s;
-     height: 100%;
-     overflow: hidden;
-  }
 }
 
 .fab{
@@ -631,11 +654,23 @@ a {
 }
 
 .collapse {
-  -moz-transition: height 1s;
-   -ms-transition: height 1s;
-   -o-transition: height 1s;
-   -webkit-transition: height 1s;
-   transition: height 1s;
-   height: 25%;
+  height: auto;
+  min-height: 200px;
+  transition: all 1s ease-in;
+  overflow: hidden;
    overflow: hidden;
+}
+
+@media (max-width: 400px) {
+  .abire_motto {
+    font-size: 20px;
+  }
+
+  .read_less {
+    display: none;
+  }
+
+  .read_more {
+    display: none;
+  }
 }
