@@ -115,26 +115,86 @@ $(window).load(function() {
     }, 2000);
   });
 
-  $(".read_more").click(function() {
-    $(".about_us").removeClass("collapse");
-    $(".about_us").addClass("expand");
-    $(".read_more").addClass("hidden");
-    $(".read_less").removeClass("hidden");
+  $("#rm_one").click(function() {
+    $("#card_two").addClass("hidden");
+    $("#card_three").addClass("hidden");
+    $(".card_text").css({marginLeft: "0%", marginRight: "0%"})
+    $("#card_one").css({width: "90%"});
+    $("#rm_one").addClass("hidden");
+    $("#rl_one").removeClass("hidden");
 
     // remove text with ellipses and add full text
     $("#a_before").addClass("hidden");
     $("#a_after").removeClass("hidden");
   });
 
-  $(".read_less").click(function() {
-    $(".about_us").removeClass("expand");
-    $(".about_us").addClass("collapse");
-    $(".read_less").addClass("hidden");
-    $(".read_more").removeClass("hidden");
+  $("#rl_one").click(function() {
+    $("#card_two").removeClass("hidden");
+    $("#card_three").removeClass("hidden");
+    $("#card_one").removeAttr( 'style' );
+    $(".card_text").removeAttr( 'style' );
+    $("#rm_one").removeClass("hidden");
+    $("#rl_one").addClass("hidden");
 
     // remove text with ellipses and add full text
-    $("#a_after").addClass("hidden");
-    $("#a_before").removeClass("hidden");
+    $("#a_before").addClass("hidden");
+    $("#a_after").removeClass("hidden");
+  });
+
+  /* --------------------------------------------------------------- */
+
+  $("#rm_two").click(function() {
+    $("#card_one").addClass("hidden");
+    $("#card_three").addClass("hidden");
+    $(".card_text").css({marginLeft: "0%", marginRight: "0%"})
+    $("#card_two").css({width: "90%"});
+    $("#rm_two").addClass("hidden");
+    $("#rl_two").removeClass("hidden");
+
+    // remove text with ellipses and add full text
+    $("#b_before").addClass("hidden");
+    $("#b_after").removeClass("hidden");
+  });
+
+  $("#rl_two").click(function() {
+    $("#card_one").removeClass("hidden");
+    $("#card_three").removeClass("hidden");
+    $("#card_two").removeAttr( 'style' );
+    $(".card_text").removeAttr( 'style' );
+    $("#rm_two").removeClass("hidden");
+    $("#rl_two").addClass("hidden");
+
+    // remove text with ellipses and add full text
+    $("#b_before").addClass("hidden");
+    $("#b_after").removeClass("hidden");
+  });
+
+  /* --------------------------------------------------------------- */
+
+  $("#rm_three").click(function() {
+    $("#card_one").addClass("hidden");
+    $("#card_two").addClass("hidden");
+    $(".card_text").css({marginLeft: "0%", marginRight: "0%"})
+    $("#card_three").css({width: "90%"});
+    $("#rm_three").addClass("hidden");
+    $("#rl_three").removeClass("hidden");
+
+    // remove text with ellipses and add full text
+    $("#c_before").addClass("hidden");
+    $("#c_after").removeClass("hidden");
+  });
+
+  $("#rl_three").click(function() {
+    $("#card_one").removeClass("hidden");
+    $("#card_two").removeClass("hidden");
+    $("#card_three").removeAttr( 'style' );
+    $(".card_text").removeAttr( 'style' );
+    $("#rm_three").removeClass("hidden");
+    $("#rl_three").addClass("hidden");
+
+    // remove text with ellipses and add full text
+    $("#c_after").addClass("hidden");
+    $("#c_before").removeClass("hidden");
   });
 
   $("#register").click(function() {
