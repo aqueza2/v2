@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :check_user_role, only: :index
 
   def index
