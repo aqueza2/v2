@@ -118,7 +118,7 @@ $(window).load(function() {
   $("#rm_one").click(function() {
     $("#card_two").addClass("hidden");
     $("#card_three").addClass("hidden");
-    $(".card_text").css({marginLeft: "0%", marginRight: "0%"})
+    $(".card_text").css({marginLeft: "0%", marginRight: "0%", textAlign: "center"})
     $("#card_one").css({width: "90%"});
     $("#rm_one").addClass("hidden");
     $("#rl_one").removeClass("hidden");
@@ -137,8 +137,8 @@ $(window).load(function() {
     $("#rl_one").addClass("hidden");
 
     // remove text with ellipses and add full text
-    $("#a_before").addClass("hidden");
-    $("#a_after").removeClass("hidden");
+    $("#a_before").removeClass("hidden");
+    $("#a_after").addClass("hidden");
   });
 
   /* --------------------------------------------------------------- */
@@ -146,7 +146,7 @@ $(window).load(function() {
   $("#rm_two").click(function() {
     $("#card_one").addClass("hidden");
     $("#card_three").addClass("hidden");
-    $(".card_text").css({marginLeft: "0%", marginRight: "0%"})
+    $(".card_text").css({marginLeft: "0%", marginRight: "0%", textAlign: "center"})
     $("#card_two").css({width: "90%"});
     $("#rm_two").addClass("hidden");
     $("#rl_two").removeClass("hidden");
@@ -165,8 +165,8 @@ $(window).load(function() {
     $("#rl_two").addClass("hidden");
 
     // remove text with ellipses and add full text
-    $("#b_before").addClass("hidden");
-    $("#b_after").removeClass("hidden");
+    $("#b_before").removeClass("hidden");
+    $("#b_after").addClass("hidden");
   });
 
   /* --------------------------------------------------------------- */
@@ -174,7 +174,7 @@ $(window).load(function() {
   $("#rm_three").click(function() {
     $("#card_one").addClass("hidden");
     $("#card_two").addClass("hidden");
-    $(".card_text").css({marginLeft: "0%", marginRight: "0%"})
+    $(".card_text").css({marginLeft: "0%", marginRight: "0%", textAlign: "center"})
     $("#card_three").css({width: "90%"});
     $("#rm_three").addClass("hidden");
     $("#rl_three").removeClass("hidden");

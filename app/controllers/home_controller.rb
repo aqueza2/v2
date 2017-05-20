@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   end
 
   def contractor
-
+    @listings = current_user.listings
   end
 
   def check_user_role
