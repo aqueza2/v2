@@ -1,0 +1,20 @@
+#viewer_section {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+#viewer_list {
+  list-style: none;
+  overflow: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
