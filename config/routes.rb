@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {:registrations => "user/registrations"}
   resources :users
   get "/viewer" => "home#viewer", as: :viewer
+  get "/viewer/messages" => "home#viewer_messages", as: :viewer_messages
   get "/contractor" => "home#contractor", as: :contractor
 
 	namespace :api, :defaults => {:format => 'json'} do
