@@ -13,6 +13,7 @@
         <%= f.phone_field :phone_number, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowTwo", placeholder: "Phone Number" %>
         <%= f.text_field :category, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowThree", placeholder: "Category" %>
         <%= f.text_field :work_description, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowThree", placeholder: "Work Description" %>
+        <%= f.hidden_field :role, autocomplete:"off", value: "contractor" %>
         <%= f.text_field :zip_code, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowFour", placeholder: "Zip Code" %>
         <%= f.password_field :password, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowFour", id: "_RegisterPassword", placeholder: "Password"%>
         <%= f.submit "Register", class: "_RegisterInput ripple", id: "_RegisterSubmit" %>
@@ -28,6 +29,7 @@
         <%= f.email_field :email, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowTwo", placeholder: "E-Mail" %>
         <%= f.phone_field :phone_number, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowTwo", placeholder: "Phone Number" %>
         <%= f.text_field :zip_code, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowThree", placeholder: "Zip Code" %>
+        <%= f.hidden_field :role, autocomplete:"off", value: "viewer" %>
         <%= f.password_field :password, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowThree", id: "_RegisterPassword", placeholder: "Password"%>
         <%= f.submit "Register", class: "_RegisterInput ripple", id: "_RegisterSubmit" %>
         <p id="_RegisterResponse"></p>

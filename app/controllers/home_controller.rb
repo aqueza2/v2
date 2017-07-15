@@ -17,11 +17,14 @@ class HomeController < ApplicationController
   def check_user_role
     if user_signed_in?
       if current_user.role == "viewer"
+        p "in viewer $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
           redirect_to viewer_path
       elsif current_user.role == "contractor"
+        p "in contractor &&&&&&&&&&&&&&&&&&&&&&&&&&"
           redirect_to contractor_path
       end
     end
+
   end
 
 end
