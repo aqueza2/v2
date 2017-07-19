@@ -197,6 +197,7 @@ $(window).load(function() {
     $("#c_before").removeClass("hidden");
   });
 
+//if form for registering does not work, check this function (the id might conflict with the class)
   $("#register").click(function() {
     $("#registerBack").removeClass("hidden");
   });
