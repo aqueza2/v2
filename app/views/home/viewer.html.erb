@@ -1,4 +1,4 @@
-<section id="toolbar_section">
+``<section id="toolbar_section">
   <div id="toolbar_top">
     <div id="menuContainer">
       <i class="material-icons" id="menu">&#xE5D2;</i>
@@ -18,13 +18,13 @@
     <ul class="bottom_toolbar" id="bt_right">
       <li class="bottom_toolbar_links">My Account</li>
       <li class="bottom_toolbar_links">Help</li>
-      <li class="bottom_toolbar_links">Log Out</li>
+      <%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: "bottom_toolbar_links" %>
     </ul>
   </div>
 </section>
 <section id="viewer_section">
   <ul id="viewer_list">
-  
+
     <li class="ad">
       <div class="ad_main">
         <img src="http://cdn.devicemag.com/wp-content/uploads/2010/11/target-toy-book-.jpg" alt="ad image" class="ad_img"/>

@@ -18,7 +18,7 @@
     <ul class="bottom_toolbar" id="bt_right">
       <li class="bottom_toolbar_links">My Account</li>
       <li class="bottom_toolbar_links">Help</li>
-      <li class="bottom_toolbar_links">Log Out</li>
+      <%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: "bottom_toolbar_links" %>
     </ul>
   </div>
 </section>
