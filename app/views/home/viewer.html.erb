@@ -1,4 +1,4 @@
-``<section id="toolbar_section">
+<section id="toolbar_section">
   <div id="toolbar_top">
     <div id="menuContainer">
       <i class="material-icons" id="menu">&#xE5D2;</i>
@@ -16,7 +16,7 @@
       <%= image_tag("icon.png", id: "icon", alt: "icon")%>
     </div>
     <ul class="bottom_toolbar" id="bt_right">
-      <li class="bottom_toolbar_links">My Account</li>
+      <%= link_to 'My Account', user_path(current_user), class: "bottom_toolbar_links" %>
       <li class="bottom_toolbar_links">Help</li>
       <%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: "bottom_toolbar_links" %>
     </ul>

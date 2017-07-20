@@ -5,6 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   acts_as_token_authenticatable
+  mount_uploader :avatar, AvatarUploader
 
   has_many :listings
   has_many :given_ratings, class_name: "Rating", foreign_key: :author_id
