@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :received_conversations, class_name: "Conversation", foreign_key: :to_id
   has_many :sent_messages, class_name: "Message", foreign_key: :from_id
   has_many :received_messages, class_name: "Message", foreign_key: :to_id
+  has_many :contractor_categories
 
 
   def contractors
