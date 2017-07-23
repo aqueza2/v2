@@ -16,6 +16,8 @@ class User < ApplicationRecord
   has_many :received_messages, class_name: "Message", foreign_key: :to_id
   has_many :contractor_categories
 
+   accepts_nested_attributes_for :contractor_categories, allow_destroy: true
+
 
   def contractors
     User.where("role = ?", "contractor")
