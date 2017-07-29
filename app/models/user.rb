@@ -14,6 +14,9 @@ class User < ApplicationRecord
   has_many :received_conversations, class_name: "Conversation", foreign_key: :to_id
   has_many :sent_messages, class_name: "Message", foreign_key: :from_id
   has_many :received_messages, class_name: "Message", foreign_key: :to_id
+  has_many :contractor_categories
+  has_many :categories, through: :contractor_categories
+   accepts_nested_attributes_for :contractor_categories, allow_destroy: true
 
 
   def contractors

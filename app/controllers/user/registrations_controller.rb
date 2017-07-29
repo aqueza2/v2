@@ -24,6 +24,6 @@ class User::RegistrationsController < Devise::RegistrationsController
   protected
 
   def configure_permitted_parameters
-   devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :phone_number, :email, :zip_code, :category, :work_description, :password, :role, :avatar])
+   devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :phone_number, :email, :zip_code, :category, :work_description, :password, :role, :avatar, contractor_categories_attributes: [:id, :category_id]])
   end
 end

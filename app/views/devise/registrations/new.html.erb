@@ -11,7 +11,9 @@
         <%= f.text_field :last_name, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials", placeholder: "Last Name" %>
         <%= f.email_field :email, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowTwo", placeholder: "E-Mail" %>
         <%= f.phone_field :phone_number, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowTwo", placeholder: "Phone Number" %>
-        <%= f.text_field :category, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowThree", placeholder: "Category" %>
+        <%= fields_for :contractor_categories do |cat| %>
+          <%= cat.select :category, Category.all.collect {|p| [ p.name, p.id ] }, {prompt: 'Select Categories'},  class: "RowThree" %>
+        <% end %>
         <%= f.text_field :work_description, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputR _RegisterCredentials RowThree", placeholder: "Work Description" %>
         <%= f.hidden_field :role, autocomplete:"off", value: "contractor" %>
         <%= f.text_field :zip_code, autofocus: true, required: "", autocomplete:"off", class: "_RegisterInputL _RegisterCredentials RowFour", placeholder: "Zip Code" %>
